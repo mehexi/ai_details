@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/accec63faf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <!-- sort by data  -->
+        <section class="flex justify-center items-center p-[50px]">
+            <div class="text-center flex flex-col p-5 justify-center align-middle items-center gap-5">
+                <h1 class="text-4xl font-bold">AI Universe Hub</h1>
+                <button class="px-4 py-2 bg-red-600 rounded w-fit text-white">
+                    Sort by date
+                </button>
+            </div>
+        </section>
+
+        <!-- card section  -->
+
+        <section id="card-container" class="mx-12 grid grid-cols-4 gap-6">
+            <!-- card 1  -->
+        </section>
+        <!-- modal trigger  -->
+
+        <!-- modal  -->
+        <input type="checkbox" id="tw-modal" class="peer fixed appearance-none opacity-0" />
+        <label for="tw-modal"
+            class="pointer-events-none invisible fixed inset-0 flex items-center justify-center overflow-hidden overscroll-contain bg-slate-700/30 opacity-0 transition-all duration-200 ease-in-out peer-checked:pointer-events-auto peer-checked:visible peer-checked:opacity-100 peer-checked:[&>*]:translate-y-0 peer-checked:[&>*]:scale-100">
+            <div class="w-[1000px] bg-white p-6 text-black shadow-2xl transition rounded-lg relative">
+                <button class="absolute top-4 right-4 text-gray-400 hover:text-red-400" onclick="closeModal()">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+                <div class="grid grid-cols-2">
+                    <div
+                        class="bg-[#EB5757]/5 border border-red-400 rounded p-8 flex flex-col justify-center items-center gap-10">
+                        <h1 id="modal-title" class="text-2xl font-bold">
+                            ChatGPT is an AI-powered chatbot platform that uses OpenAI's GPT
+                            technology to simulate human conversation.
+                        </h1>
+                        <div class="flex gap-2">
+                            <div class="bg-white p-3 text-center rounded font-bold text-base">
+                                <h1>$10/month Basic</h1>
+                            </div>
+                            <div class="bg-white p-3 text-center rounded font-bold text-base">
+                                <h1>$10/month Basic</h1>
+                            </div>
+                            <div class="bg-white p-3 text-center rounded font-bold text-base">
+                                <h1>$10/month Basic</h1>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 w-full">
+                            <div class="col-span-2 flex flex-col gap-2">
+                                <h1 class="text-2xl font-bold">features</h1>
+                                <ul class="list-inside list-disc">
+                                    <li>Customizable responses</li>
+                                    <li>Customizable responses</li>
+                                    <li>Customizable responses</li>
+                                </ul>
+                            </div>
+                            <div class="col-span-1 flex flex-col gap-2">
+                                <h1 class="text-2xl font-bold">features</h1>
+                                <ul class="list-inside list-disc">
+                                    <li>Fb massanger</li>
+                                    <li>slack</li>
+                                    <li>telegram</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded p-8 flex flex-col justify-center items-center gap-10">
+                        <img src="image/Rectangle 23.png" alt="">
+                        <div class="gap-4 flex flex-col text-center">
+                            <h1 class="text-2xl font-bold">Hi, How are you doing today</h1>
+                            <p class="text-[#585858]">I'm doing well, thank you for asking. How can I assist you today?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    </main>
+
+    <!-- script  -->
+    <script src="script.js"></script>
+</body>
+
+</html>
