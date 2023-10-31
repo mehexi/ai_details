@@ -53,11 +53,18 @@ const loadAi = (ArreyofAi) => {
 const cardDetails = (id) => {
   fetch(`https://openapi.programming-hero.com/api/ai/tool/${id}`)
     .then((res) => res.json())
-    .then((data) => modalInput(data));
+    .then((data) => modalInput(data.data));
 };
 
 const modalInput = (data) => {
-    document.getElementById('modal-title').innerText = 
+    document.getElementById('modal-title').innerText = data.description
+    document.getElementById('modal-img').src = data.image_link[0]
+    document.getElementById('modal-pricing-1').innerText = data.pricing[0].price
+    document.getElementById('modal-pricing-name-1').innerText = data.pricing[0].plan
+    document.getElementById('modal-pricing-2').innerText = data.pricing[1].price
+    document.getElementById('modal-pricing-name-2').innerText = data.pricing[1].plan
+    document.getElementById('modal-pricing-3').innerText = data.pricing[2].price
+    document.getElementById('modal-pricing-name-3').innerText = data.pricing[2].plan
 }
 
 aiApi();
